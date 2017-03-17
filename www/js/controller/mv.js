@@ -17,6 +17,7 @@ app.controller('WatchController', ['$rootScope','$scope', 'service', '$controlle
     
     $scope.onTopClick = function() {
         $scope.choice = 1;
+        $scope.videos_top = '';
         if (service.videos_top) {
             $scope.videos_top = service.videos_top;
             $scope.showNoItem = ($scope.videos_top.length === 0) ? true : false;
@@ -38,6 +39,7 @@ app.controller('WatchController', ['$rootScope','$scope', 'service', '$controlle
 
     $scope.onNewClick = function() {
         $scope.choice = 2;
+        $scope.videos_new = '';
         if (service.videos_new) {
             $scope.videos_new = service.videos_new;
             $scope.showNoItem = ($scope.videos_new.length === 0) ? true : false;
@@ -59,6 +61,7 @@ app.controller('WatchController', ['$rootScope','$scope', 'service', '$controlle
     };
     
     $scope.onMVClick = function() {
+        $scope.mvs = '';
         $scope.choice = 3;
         $scope.showNoItem = false;
         if (service.mvs) {

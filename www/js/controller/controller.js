@@ -12,7 +12,6 @@ app.controller('Controller', ['$rootScope', '$scope', 'service', '$http', 'local
     $scope.musicPath = service.musicPath;
     $scope.artistPath = service.artistPath;
     $scope.sponsorPath = service.sponsorPath;
-    $scope.newsPath = service.newsPath;
     $scope.messageNoMusic = service.messageNoMusic;
     
     if (service.showTV !== undefined) {
@@ -109,7 +108,6 @@ app.controller('Controller', ['$rootScope', '$scope', 'service', '$http', 'local
             service.musics_recentMV = '';
             service.sponsors = '';
             service.artists = '';
-            service.news = '';
         }
 
         if (!service.productions) {
@@ -390,7 +388,7 @@ app.controller('Controller', ['$rootScope', '$scope', 'service', '$http', 'local
             }
             playlist.push( items[i] );
         }
-        if (items[itemIndex].src.indexOf('superean.com') > -1 && navigator.connection.type === Connection.NONE) {
+        if (items[itemIndex].src.indexOf('nakket.com') > -1 && navigator.connection.type === Connection.NONE) {
             window.plugins.toast.showShortCenter(service.messageNoInternet);
             return;
         }

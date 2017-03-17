@@ -2,7 +2,7 @@
 
 app.factory('service', [ '$rootScope', '$http', '$q', 'localStorageService', function($rootScope, $http, $q, localStorageService) {
 
-    var serverUrl = 'http://superean.com/apps/kamsan';
+    var serverUrl = 'http://music.nakket.com/files';
     
     var cloudAPI = new CloudAPI($http);
 
@@ -22,8 +22,8 @@ app.factory('service', [ '$rootScope', '$http', '$q', 'localStorageService', fun
     };
     
     return {
-        version     : '1.1.0',
-        platform    : 'Android',
+        version     : '1.3.1',
+        platform    : 'iOS',
         mvPath      : serverUrl + '/mv',
         musicPath   : serverUrl + '/music',
         seriePath   : serverUrl + '/serie',
@@ -31,7 +31,6 @@ app.factory('service', [ '$rootScope', '$http', '$q', 'localStorageService', fun
         viewPath    : serverUrl + '/station/view',
         artistPath  : serverUrl + '/music/All-Artist',
         sponsorPath : serverUrl + '/sponsor',
-        newsPath    : serverUrl + '/news',
         productionPath  : serverUrl + '/music/All-Production',
 
         serverUrl   : serverUrl,

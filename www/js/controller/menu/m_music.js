@@ -103,11 +103,11 @@ app.controller('MenuMusicController', ['$rootScope','$scope', 'service', 'localS
             items[i].src = ($scope.choice==='download' || ($scope.choice==='playlist_detail' && service.playlist_mode === 'offline') ) ? encodeURI(cordova.file.dataDirectory + 'MUSIC/' + items[i].url) : encodeURI($scope.musicPath + "/" + items[i].album + "/" + items[i].url);
             playlist.push( items[i] );
         }
-        if (items[itemIndex].src.indexOf('superean.com') > -1 && navigator.connection.type === Connection.NONE) {
+        if (items[itemIndex].src.indexOf('nakket.com') > -1 && navigator.connection.type === Connection.NONE) {
             window.plugins.toast.showShortCenter(service.messageNoInternet);
             return;
         }
-        if (items[itemIndex].src.indexOf('superean.com') === -1) {
+        if (items[itemIndex].src.indexOf('nakket.com') === -1) {
             window.resolveLocalFileSystemURL(cordova.file.dataDirectory + 'MUSIC/' + item.url, 
                 function (fileSystem) {
                     if (fileSystem.isFile) {
@@ -237,7 +237,7 @@ app.controller('MenuMusicController', ['$rootScope','$scope', 'service', 'localS
                     $scope.showNoItem = ($scope.musics.length === 0) ? true : false;
                     $scope.$apply();
                     localStorageService.set('offline_playlists_' + service.selected_playlist.id, $scope.musics);
-                    window.plugins.toast.showShortCenter('បានលុបចេញពីកំរងបទចម្រៀង');
+                    window.plugins.toast.showShortCenter('បានលុបចេញពីបញ្ជីបទចម្រៀង');
                 }
             }
             // Download this Music
@@ -365,7 +365,7 @@ app.controller('MenuMusicController', ['$rootScope','$scope', 'service', 'localS
         };
         var buttonFavorite = 'Add to My Music';
         var buttonPlaylist = 'Add to My Playlist..';
-        if ($scope.musicNow.src.indexOf('superean.com') === -1) {
+        if ($scope.musicNow.src.indexOf('nakket.com') === -1) {
             var buttonPlaylist = 'Add to Local Playlist..';
         }
         var options = {

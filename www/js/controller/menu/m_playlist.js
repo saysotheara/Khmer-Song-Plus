@@ -63,7 +63,7 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
         var options = {
             'title' : item.name,
             'androidTheme' : window.plugins.actionsheet.ANDROID_THEMES.THEME_HOLO_LIGHT,
-            'buttonLabels': ['កែប្រែឈ្មោះ...', 'លុបកំរងបទចម្រៀង'],
+            'buttonLabels': ['កែប្រែឈ្មោះ...', 'លុបបញ្ជីបទចម្រៀង'],
             'androidEnableCancelButton' : true,
             'addCancelButtonWithLabel': 'Cancel',
             'position': [20, 40]
@@ -78,10 +78,10 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
             .success( function(result) {
                 $scope.musics.splice(itemIndex, 1);
                 $scope.showNoItem = ($scope.musics.length === 0) ? true : false;
-                window.plugins.toast.showShortCenter('បានលុបចេញពីកំរងបទចម្រៀង');
+                window.plugins.toast.showShortCenter('បានលុបចេញពីបញ្ជីបទចម្រៀង');
             })
             .error( function() {
-                window.plugins.toast.showShortCenter('មិនអាចលុបចេញពីកំរងបទចម្រៀងបានទេ');
+                window.plugins.toast.showShortCenter('មិនអាចលុបចេញពីបញ្ជីបទចម្រៀងបានទេ');
             }
         );
     });
@@ -177,7 +177,7 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
     });
 
     $scope.onPlaylistSelect = function(item, itemIndex) {
-        if (item.src.indexOf('superean.com') === -1) {
+        if (item.src.indexOf('nakket.com') === -1) {
             window.resolveLocalFileSystemURL(cordova.file.dataDirectory + 'MUSIC/' + item.url, 
                 function (fileSystem) {
                     if (fileSystem.isFile) {
@@ -221,10 +221,10 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
         $scope.musicNow_index = $scope.music_playlists.indexOf(service.playedMusic);
         
         if ($scope.isShuffle) {
-            window.plugins.toast.showShortCenter('ស្ដាប់ឆ្លាស់ៗ: ON');
+            window.plugins.toast.showShortCenter('ស្ដាប់ចម្រៀងឆ្លាស់ : ON');
         }
         else {
-            window.plugins.toast.showShortCenter('ស្ដាប់ឆ្លាស់ៗ : OFF');
+            window.plugins.toast.showShortCenter('ស្ដាប់ចម្រៀងឆ្លាស់ : OFF');
         }
     };
 
@@ -233,10 +233,10 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
         service.isRepeat = $scope.isRepeat;
         
         if ($scope.isRepeat) {
-            window.plugins.toast.showShortCenter('ស្ដាប់វិលជុំដដែលៗ : ON');
+            window.plugins.toast.showShortCenter('ស្ដាប់ឡើងវិញ : ON');
         }
         else {
-            window.plugins.toast.showShortCenter('ស្ដាប់វិលជុំដដែលៗ : OFF');
+            window.plugins.toast.showShortCenter('ស្ដាប់ឡើងវិញ : OFF');
         }
     };
     
@@ -246,7 +246,7 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
 
     $scope.onAddToPlaylistClick = function() {
         service.selected_music = $scope.musicNow;
-        if ($scope.musicNow.src.indexOf('superean') > -1) {
+        if ($scope.musicNow.src.indexOf('nakket.com') > -1) {
             $rootScope.$broadcast('event: onPlaylistMusicAdd');
         }
         else {
@@ -263,7 +263,7 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
                     }
                     else {
                         $scope.music_playlists.splice(itemIndex, 1);
-                        window.plugins.toast.showShortCenter('បានលុបចេញពីកំរងបទចម្រៀង');
+                        window.plugins.toast.showShortCenter('បានលុបចេញពីបញ្ជីបទចម្រៀង');
                     }
                 }
                 else if (index == 2) {
@@ -290,7 +290,7 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
                 }
                 else {
                     $scope.music_playlists.splice(itemIndex, 1);
-                    window.plugins.toast.showShortCenter('បានលុបចេញពីកំរងបទចម្រៀង');
+                    window.plugins.toast.showShortCenter('បានលុបចេញពីបញ្ជីបទចម្រៀង');
                 }
             }
             else if (index == 2) {
@@ -306,7 +306,7 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
                     $rootScope.$broadcast('event: onOfflinePlaylistMusicAdd');
                 }
             }
-            else if (index == 4 && item.src.indexOf('superean.com') > -1 && service.showTV) {
+            else if (index == 4 && item.src.indexOf('nakket.com') > -1 && service.showTV) {
                 service.downloadedMusic = item;
                 $rootScope.$broadcast('event: onDownloadMusicAdd');
             }
@@ -332,7 +332,7 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
                 'position': [20, 40]
             };
         }
-        if (item.src.indexOf('superean.com') === -1) {
+        if (item.src.indexOf('nakket.com') === -1) {
             var buttonPlaylist = 'Add to Local Playlist..';
             options = {
                 'title' : item.title,
@@ -390,7 +390,7 @@ app.controller('MyPlaylistController', ['$rootScope', '$scope', 'service', 'loca
                     $scope.musics.splice(itemIndex, 1);
                     $scope.showNoItem = ($scope.musics.length === 0) ? true : false;
                     localStorageService.set('offline_playlists_' + service.selected_playlist.id, $scope.musics);
-                    window.plugins.toast.showShortCenter('ការលុបកំរងបទចម្រៀងបានជោគជ័យ');
+                    window.plugins.toast.showShortCenter('ការលុបបញ្ជីបទចម្រៀងបានជោគជ័យ');
                     $scope.$apply();
                 }
                 else {

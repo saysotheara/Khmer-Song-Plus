@@ -106,9 +106,9 @@ app.controller('ProfileController', ['$rootScope', '$scope', 'service', 'localSt
            
     $scope.onUserProfileClick = function() {
         if (service.getLocalStorageItems('profile') !== '') {
-            // service.detail = 'connect';
-            // app.navi.pushPage('detail.html');
-            $scope.onFacebookClick();
+            service.detail = 'connect';
+            app.navi.pushPage('detail.html');
+            // $scope.onFacebookClick();
         }
         else {
             $cordovaOauth.facebook('559502584217995', ['email', 'public_profile', 'user_friends'])

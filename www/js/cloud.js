@@ -5,8 +5,7 @@
 function CloudAPI(httpProtocol) {
     
     this.http       = httpProtocol;
-    // this.baseUrl    = "http://12a77170.ngrok.io/";
-    this.baseUrl    = "http://superean.com/apps/kamsan/";
+    this.baseUrl    = "http://music.nakket.com/";
 
     this.liveListUrl                = 'api/live/list/';
     this.liveViewAddUrl             = 'api/live/view/add/';

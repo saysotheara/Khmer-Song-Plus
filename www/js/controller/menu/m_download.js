@@ -115,7 +115,7 @@ app.controller('DownloadController', ['$rootScope', '$scope', '$filter', 'servic
                             }
                             removeQueueDownload(live);
                             $rootScope.$broadcast('refresh: download_finished');
-                            window.plugins.toast.showShortCenter('ការទាញយកបានបញ្ចប់: ' + music.title);
+                            window.plugins.toast.showShortCenter('បានទាញយក: ' + music.title);
                         }
                     );
                 },

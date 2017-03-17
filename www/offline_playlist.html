@@ -8,7 +8,7 @@
     <ons-page id="radio-page" ng-controller="OfflineController_playlist" style="background: #28292a">
         <ons-toolbar class="toolbar" fixed-style="">
             <div class="center">
-                កំរងបទចម្រៀង
+                បញ្ជីបទចម្រៀង
             </div>
             <div class="left">
                 <ons-toolbar-button ng-click="onProfileClick();">
@@ -16,12 +16,14 @@
                 </ons-toolbar-button>
             </div>
             <div class="right">
-                <ons-toolbar-button ng-click="onOfflinePlaylistAdd();"><span class="icon-color">New</span></ons-toolbar-button>
+                <ons-toolbar-button ng-click="onOfflinePlaylistAdd();">
+                    <ons-icon icon="plus-circle" class="icon-color"></ons-icon>
+                </ons-toolbar-button>
             </div>
         </ons-toolbar>
 
         <div class="info" ng-if="showNoItem">
-            មិនមានកំរងបទចម្រៀង
+            មិនមានបញ្ជីបទចម្រៀងទេ
         </div>
         <ons-list class="ons-list" ng-if="playlists.length > 0">
             <ons-list-item modifier="chevron" class="my_playlist-list" ng-click="onOfflinePlaylistSelect(item, $index);" ng-repeat="item in playlists">

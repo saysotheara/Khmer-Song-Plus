@@ -94,7 +94,7 @@ app.controller('MainController', ['$rootScope', '$scope', 'service', '$controlle
 
     $scope.onPlayPrevious = function() {
         var currentTrack = $scope.player.currentTrack - 1;
-        if (navigator.connection.type === Connection.NONE && currentTrack > 0 && $scope.music_playlists[currentTrack - 1].src.indexOf('superean.com') > -1) {
+        if (navigator.connection.type === Connection.NONE && currentTrack > 0 && $scope.music_playlists[currentTrack - 1].src.indexOf('nakket.com') > -1) {
             window.plugins.toast.showShortCenter(service.messageNoInternet);
             return;
         }
@@ -118,7 +118,7 @@ app.controller('MainController', ['$rootScope', '$scope', 'service', '$controlle
 
     $scope.onPlayNext = function() {
         var currentTrack = $scope.player.currentTrack - 1;
-        if (navigator.connection.type === Connection.NONE && currentTrack < $scope.music_playlists.length - 1 && $scope.music_playlists[currentTrack + 1].src.indexOf('superean.com') > -1) {
+        if (navigator.connection.type === Connection.NONE && currentTrack < $scope.music_playlists.length - 1 && $scope.music_playlists[currentTrack + 1].src.indexOf('nakket.com') > -1) {
             window.plugins.toast.showShortCenter(service.messageNoInternet);
             return;
         }

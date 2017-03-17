@@ -77,7 +77,7 @@
         <ons-dialog var="dialog" cancelable ng-controller="DialogPlaylistController" style="width: 70%; height: 45%; background: #28292a; border: 1px solid white;">
             <ons-toolbar inline class="toolbar-color" fixed-style="">
                 <div class="center">
-                    Add to the Playlist..
+                    ជ្រើសរើសបញ្ជីបទចម្រៀង
                 </div>
             </ons-toolbar>
             <ons-scroller class="main-playlist" style="height: 100%;">
@@ -109,7 +109,7 @@
         <ons-dialog var="dialog" cancelable ng-controller="DialogPlaylistController" style="width: 70%; height: 45%; background: #28292a; border: 1px solid white;">
             <ons-toolbar inline class="toolbar-color" fixed-style="">
                 <div class="center">
-                    បញ្ចូលទៅក្នុងកំរងបទចម្រៀង
+                    ជ្រើសរើសបញ្ជីបទចម្រៀង
                 </div>
             </ons-toolbar>
             <ons-scroller class="main-playlist" style="height: 100%;">
@@ -141,7 +141,7 @@
         <ons-dialog var="dialog_new" cancelable ng-controller="DialogPlaylistController" ons-posthide="onDialogHide();" style="background: #28292a; border: 1px solid white;">
             <ons-toolbar inline class="toolbar-color" fixed-style="">
                 <div class="center">
-                    <span>បង្កើតកំរងបទចម្រៀងថ្មី</span>
+                    <span>បង្កើតបញ្ជីបទចម្រៀងថ្មី</span>
                 </div>
             </ons-toolbar>
             <p>
@@ -158,7 +158,7 @@
         <ons-dialog var="dialog_update" cancelable ng-controller="DialogPlaylistController" ons-preshow="onDialogShow();" style="background: #28292a; border: 1px solid white;">
             <ons-toolbar inline class="toolbar-color" fixed-style="">
                 <div class="center">
-                    <span>កំនែប្រែឈ្មោះកំរងបទចម្រៀង</span>
+                    <span>កំនែប្រែឈ្មោះបញ្ជីបទចម្រៀង</span>
                 </div>
             </ons-toolbar>
             <p>
@@ -345,7 +345,7 @@
                             <input type="radio" name="navi-segment-a">
                             <div class="button-bar__button">Phleng</div>
                         </div>
-                        <div class="button-bar__item" ng-click="onAlbumFilterClick('WE')">
+                        <div class="button-bar__item" ng-click="onAlbumFilterClick('WE.')">
                             <input type="radio" name="navi-segment-a">
                             <div class="button-bar__button">WE</div>
                         </div>
@@ -396,8 +396,8 @@
                             <ons-col class="action-col" ng-click="onFacebookClick()">
                               <div class="action-icon"><img src="images/facebook.png" style="height: 32px;" /></div>
                             </ons-col>
-                            <ons-col class="action-col" ng-click="onGoogleClick()">
-                              <div class="action-icon"><img src="images/google.png" style="height: 32px;" /></div>
+                            <ons-col class="action-col" ng-click="onAppleClick()">
+                              <div class="action-icon"><img src="images/apple.png" style="height: 32px;" /></div>
                             </ons-col>
                         </ons-row>
                     </ons-list-item>
@@ -444,8 +444,8 @@
                             <ons-col class="action-col" ng-click="onFacebookClick()">
                               <div class="action-icon"><img src="images/facebook.png" style="height: 32px;" /></div>
                             </ons-col>
-                            <ons-col class="action-col" ng-click="onGoogleClick()">
-                              <div class="action-icon"><img src="images/google.png" style="height: 32px;" /></div>
+                            <ons-col class="action-col" ng-click="onAppleClick()">
+                              <div class="action-icon"><img src="images/apple.png" style="height: 32px;" /></div>
                             </ons-col>
                         </ons-row>
                     </ons-list-item>
@@ -1043,7 +1043,7 @@
                             </div>
                             <div class="playlist-desc" style="margin-right: -24px;">
                                 {{ item.artist }}
-                                <span ng-show="item.src.indexOf('superean.com') == -1" style="float: right;"><i class="fa fa-cloud-download live-color" style="font-size: 11px;"></i></span>
+                                <span ng-show="item.src.indexOf('nakket.com') == -1" style="float: right;"><i class="fa fa-cloud-download live-color" style="font-size: 11px;"></i></span>
                             </div>
                         </ons-col>
                         <ons-button modifier="quiet" class="button-action" ng-click="onButtonClick_playlist(item, $index);">
@@ -1172,7 +1172,7 @@
             <ons-list class="ons-list" style="background: #57595b;">
                 <ons-list-item modifier="chevron" class="list__item__line-height" ng-click='onDownloadStorageClick()' ng-if="offline_musics.length > 0">
                     <i class="fa fa-cloud-download fa-lg" style="color: #fff; width: 19px;"></i>
-                    <span style="color: #fff;">&nbsp; ទិន្ន័យបទចម្រៀងបានទាញយក</span>
+                    <span style="color: #fff;">&nbsp; ទិន្នន័យបទចម្រៀងបានទាញយក</span>
                 </ons-list-item>
                 <ons-list-item modifier="tappable" class="list__item__line-height" ng-click='onClearCacheClick()'>
                     <i class="fa fa-hdd-o fa-lg" style="color: #fff"></i>

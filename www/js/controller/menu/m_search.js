@@ -3,9 +3,8 @@
 app.controller('SearchController', ['$rootScope', '$scope', '$filter', 'service', 'localStorageService', function($rootScope, $scope, $filter, service, localStorageService) {
 
     $scope.$on('refresh: loadSearch', function() {
-        $scope.grid         = 'hide';
         $scope.choice       = 'search';
-        $scope.pageTitle    = 'ស្វែងរកបទចំរៀង';
+        $scope.pageTitle    = 'ស្វែងរកបទចម្រៀង';
         $scope.musics       = '';
         service.musics      = '';
         $scope.searchText   = '';

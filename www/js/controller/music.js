@@ -8,6 +8,7 @@ app.controller('MusicController', ['$rootScope','$scope', 'service', '$controlle
 
     $scope.onTopClick = function() {
         $scope.choice = 1;
+        $scope.musics_top = '';
         if (service.musics_top) {
             $scope.musics_top = service.musics_top;
             $scope.showNoItem = ($scope.musics_top.length === 0) ? true : false;
@@ -29,6 +30,7 @@ app.controller('MusicController', ['$rootScope','$scope', 'service', '$controlle
 
     $scope.onFetureClick = function() {
         $scope.choice = 2;
+        $scope.musics_feature = '';
         if (service.musics_feature) {
             $scope.musics_feature = service.musics_feature;
             $scope.showNoItem = ($scope.musics_feature.length === 0) ? true : false;
@@ -52,6 +54,7 @@ app.controller('MusicController', ['$rootScope','$scope', 'service', '$controlle
 
     $scope.onNewClick = function() {
         $scope.choice = 3;
+        $scope.musics_new = '';
         if (service.musics_new) {
             $scope.musics_new = service.musics_new;
             $scope.showNoItem = ($scope.musics_new.length === 0) ? true : false;

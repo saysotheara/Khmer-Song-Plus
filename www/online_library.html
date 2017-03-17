@@ -62,7 +62,7 @@
             </div>
         </div>
         
-            <ons-list class="ons-list">
+            <ons-list class="ons-list" ng-if="albums.length > 0">
                 <ons-list-item modifier="chevron" class="playlist-list" ng-click="onAlbumSelect('', 0);">
                     <ons-row>
                         <ons-col width="25px">
@@ -109,7 +109,7 @@
         <div ng-if="choice===2">
             <div style="text-align: center;">
                 <section class="toolbar-color artist">
-                    <input type="search" class="search-input" placeholder="Quick Search for artist..." ng-model="searchQuery">
+                    <input type="search" class="search-input" placeholder="ស្វែងរកអ្នកចម្រៀង..." ng-model="searchQuery">
                 </section>
             </div>
             <div class="info" ng-if="isLoading">

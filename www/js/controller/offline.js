@@ -222,7 +222,7 @@ app.controller('OfflineController_playlist', ['$rootScope','$scope', 'service', 
         localStorageService.remove('offline_playlists_' + service.selected_playlist.id);
         $scope.$apply();
         
-        window.plugins.toast.showShortCenter("ការលុបកំរងបទចម្រៀងបានជោគជ័យ");
+        window.plugins.toast.showShortCenter("ការលុបបញ្ជីបទចម្រៀងបានជោគជ័យ");
     });
 
     $scope.onOfflinePlaylistAdd = function() {

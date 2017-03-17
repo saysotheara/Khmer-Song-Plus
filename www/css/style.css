@@ -81,33 +81,19 @@
     text-align: center;
 }
 
-/* Used in My Profile */
+/* Used in Music Player */
 
-.profile-card {
-    width: 100%;
-    text-align: center;
+.profile-card, .profile-card-offline {
+    margin: 10px;
     color: white;
-    padding: 30px 0;
-    margin-top: 25px;
     line-height: 1.4;
-    background-color: #28292a;
-    text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
-}
-
-.profile-card-offline {
-    width: 100%;
     text-align: center;
-    color: white;
-    padding: 30px 0;
-    margin-top: -20px;
-    line-height: 1.4;
     background-color: #28292a;
-    text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
 }
 
 .profile-image {
-    height: 200px;
-    width: 230px;
+    width: 100%;
+    height: auto;
     background-color: #28292a;
     border: 1px solid #ffffff;
 }
@@ -180,19 +166,6 @@
       font-size: 13px;
     }
     
-    .profile-card {
-        margin-top: 20px;
-        padding: 0px;
-    }
-    .profile-card-offline {
-        margin-top: 5px;
-        padding: 0px;
-    }
-    .profile-image {
-        height: 120px;
-        width: 150px;
-    }
-    
 }
 
 /* iPhone 5 & 5S */
@@ -223,20 +196,7 @@
     .info-unit {
       font-size: 13px;
     }
- 
-    .profile-card {
-        margin-top: 20px;
-        padding: 0px;
-    }
-    .profile-card-offline {
-        margin-top: 5px;
-        padding: 0px;
-    }
-    .profile-image {
-        height: 190px;
-        width: 220px;
-    }
- 
+  
 }
 
 /* Android Tablet */
@@ -251,13 +211,6 @@
         margin: 10px 6% 0 6%;
     }
     
-    .profile-card {
-        margin-top: 60px;
-    }
-    .profile-card-offline {
-        margin-top: 30px;
-    }
-    
 }
 
 @media only screen and (min-device-width : 600px) and (max-device-width : 1024px) {
@@ -270,14 +223,7 @@
         text-align: center; 
         margin: 10px 6% 0 6%;
     }
-    
-    .profile-card {
-        margin-top: 60px;
-    }
-    .profile-card-offline {
-        margin-top: 30px;
-    }
-    
+        
 }
 
 /* iPad */
@@ -292,22 +238,10 @@
         margin: 10px 6% 0 6%;
     }
 
-    .profile-card {
-        margin-top: 70px;
-    }
-    .profile-card-offline {
-        margin-top: 50px;
-    }
-
     .profile-name {
         margin: 20px 0 15px 0;
         font-weight: 400;
         font-size: 16px;
-    }
-
-    .profile-image {
-        height: 270px;
-        width: 300px;
     }
 
     .profile-id {
@@ -332,13 +266,6 @@
         margin:8px auto 0;
     }
 
-    .profile-card {
-        margin-top: 40px;
-    }
-    .profile-card-offline {
-        margin-top: 10px;
-    }
-
 }
 
 /* iPhone 6 Plus */
@@ -356,14 +283,7 @@
         text-align: center; 
         margin: 10px 4% 0 4%;
     }
-    
-    .profile-card {
-        margin-top: 50px;
-    }
-    .profile-card-offline {
-        margin-top: 20px;
-    }
-    
+        
     .profile-name {
         margin: 20px 0 15px 0;
         font-weight: 400;
@@ -374,12 +294,7 @@
         margin: 0 0 13px 0;
         font-size: 15px;
     }
-    
-    .profile-image {
-        height: 220px;
-        width: 250px;
-    }
-    
+        
     .profile-desc {
         margin: 0 0 13px 0;
         font-size: 14px;

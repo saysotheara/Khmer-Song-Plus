@@ -41,7 +41,7 @@ app.controller('PlaylistController', ['$rootScope','$scope', 'service', '$contro
             localStorageService.remove('offline_playlists_' + service.selected_playlist.id);
             $scope.$apply();
         }
-        window.plugins.toast.showShortCenter("ការលុបកំរងបទចម្រៀងបានជោគជ័យ");
+        window.plugins.toast.showShortCenter("ការលុបបញ្ជីបទចម្រៀងបានជោគជ័យ");
     });
 
     $scope.$on('ACTION_PLAYLIST_ADDED', function() {
@@ -153,7 +153,7 @@ app.controller('DialogPlaylistController', ['$rootScope', '$scope', 'service', '
                 service.selected_playlist_id = item.id;
                 localStorageService.set('offline_playlists_' + item.id, offline_playlist_detail);
                 $rootScope.$broadcast('refresh: added_to_my_playlist_done');
-                window.plugins.toast.showShortCenter('ការបញ្ចូលបទទៅក្នុងកំរងចម្រៀងបានជោគជ័យ');
+                window.plugins.toast.showShortCenter('ការបញ្ចូលបទទៅក្នុងបញ្ជីចម្រៀងបានជោគជ័យ');
             }
         }
         else {
@@ -166,7 +166,7 @@ app.controller('DialogPlaylistController', ['$rootScope', '$scope', 'service', '
                 .success( function(result) {
                     service.selected_playlist_id = item.id;
                     $rootScope.$broadcast('refresh: added_to_my_playlist_done');
-                    window.plugins.toast.showShortCenter('ការបញ្ចូលបទទៅក្នុងកំរងចម្រៀងបានជោគជ័យ');
+                    window.plugins.toast.showShortCenter('ការបញ្ចូលបទទៅក្នុងបញ្ជីចម្រៀងបានជោគជ័យ');
                 })
                 .error( function() {
                     window.plugins.toast.showShortCenter('បានបញ្ចូលបទចម្រៀងរួចរាល់ហើយ');
@@ -191,7 +191,7 @@ app.controller('DialogPlaylistController', ['$rootScope', '$scope', 'service', '
                 $scope.playlists_offline = service.getLocalStorageItems('offline_playlists');
                 for(i=0; i<$scope.playlists_offline.length; i++) {
                     if ($scope.playlists_offline[i].name === $scope.playlist_name) {
-                        window.plugins.toast.showShortCenter('កំរងបទចម្រៀងមានរួចហើយ...');
+                        window.plugins.toast.showShortCenter('បញ្ជីបទចម្រៀងមានរួចហើយ...');
                         isPlaylistExist = true;
                         break;
                     }
@@ -235,7 +235,7 @@ app.controller('DialogPlaylistController', ['$rootScope', '$scope', 'service', '
                         // }
                     })
                     .error( function() {
-                        window.plugins.toast.showShortCenter('កំរងបទចម្រៀងមានរួចហើយ...');
+                        window.plugins.toast.showShortCenter('បញ្ជីបទចម្រៀងមានរួចហើយ...');
                     }
                 );
             }
@@ -254,7 +254,7 @@ app.controller('DialogPlaylistController', ['$rootScope', '$scope', 'service', '
                 service.playlists_offline = service.getLocalStorageItems('offline_playlists');;
                 for(i=0; i<service.playlists_offline.length; i++) {
                     if (service.playlists_offline[i].name === $scope.new_playlist_name) {
-                        window.plugins.toast.showShortCenter('កំរងបទចម្រៀងមានរួចហើយ...');
+                        window.plugins.toast.showShortCenter('បញ្ជីបទចម្រៀងមានរួចហើយ...');
                         isPlaylistExist = true;
                         break;
                     }
@@ -276,7 +276,7 @@ app.controller('DialogPlaylistController', ['$rootScope', '$scope', 'service', '
                     $scope.dialog_update.hide();
                 })
                 .error( function() {
-                    window.plugins.toast.showShortCenter('កំរងបទចម្រៀងមានរួចហើយ...');
+                    window.plugins.toast.showShortCenter('បញ្ជីបទចម្រៀងមានរួចហើយ...');
                 }
             );
         }
